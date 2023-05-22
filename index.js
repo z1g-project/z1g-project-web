@@ -12,18 +12,8 @@ app.use(express.static(__dirname + "/static"), (_, res, next) => {
   res.sendFile(__dirname + "/406.html")
   res.status(500)
   res.sendFile(__dirname + "/500.html")
-  res.status(503)
-  res.sendFile(__dirname + "/503.html")
-  res.status(504)
-  res.sendFile(__dirname + "/504.html")
-  res.status(400)
-  res.sendFile(__dirname + "/400.html")
-  res.status(505)
-  res.sendFile(__dirname + "/505.html")
   res.status(301)
   res.sendFile(__dirname + "/301.html")
-  res.status(408)
-  res.sendFile(__dirname + "/408.html")
 });
 
 app.listen(8080);
