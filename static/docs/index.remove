@@ -4,15 +4,16 @@
   <base href="/">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirecting...</title>
+    <title>z1g Project - Documentation</title>
     <link rel="icon" href="/assets/img/icon.png">
     <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  <link rel="manifest" href="/docs/manifest.webmanifest"/>
   <meta property="og:site_name" content="z1g Project">
 <meta property="og:type" content="Website">
 <meta property="og:url" content="https://z1g-project.johnglynn2.repl.co">
 <meta property="og:title" content="Project z1g">
-<meta property="og:description" content="The link to the  Official z1g Project Documentation Website">
+<meta property="og:description" content="The Documentation for deploying z1g services - the Official z1g Project!">
 
 	<meta property="og:image" content="/assets/img/fav_img.png">
 
@@ -64,21 +65,43 @@
         </div>
     </nav>
 
-  <!-- home section start -->
+    <!-- home section start -->
     <section class="home" id="home">
       <div class="max-width">
             <div class="home-content">
-                <div class="text-2">Redirecting...</div>
-                <div class="text-1">Your content is being loaded!</div>
-                <form class="box" action="redirect.html" method="post">
-    <meta http-equiv="refresh" content="2; url='https://docs.z1g-project.repl.co'" />
-  </form>
+                <div class="text-1">Welcome to the</div>
+                <div class="text-2">z1g Project Documentation</div>
+            </div>
+        </div>
+    </section>
+
+  <section class="contact" id="contact">
+        <div class="max-width">
+            <h2 class="title">Avalible Documentation</h2>
+            <div class="contact-content">
+              <div class="column left">
+                   <form action="bruhprox">
+                        <div class="button-area">
+                            <a href="/docs/bruhprox/"><button type="button">BruhProx Documentation</button></a>
+                        </div>
+                    </form>
+                   <form action="#terbium">
+                        <div class="button-area">
+                            <a href="/docs/terbium/"><button type="button">Terbium Documentation</button></a>
+                        </div>
+                    </form>
+                  <form action="#terbium">
+                        <div class="button-area">
+                            <a href="/docs/bruhprox-core/"><button type="button">BruhProx Core Documentation</button></a>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
   
     <footer>
-        <span>© Copyright 2021-2023 <a href="/copyright/#copyright">z1g Project</a> | All rights reserved.</span>
+        <span>© Copyright 2021-2023 <a href="/copyright/">z1g Project</a> | All rights reserved.</span>
     </footer>
 
     <script src="/script.js"></script>
