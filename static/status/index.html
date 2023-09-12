@@ -86,30 +86,29 @@
                             <i class="fas fa-globe-americas"></i>
                             <div class="info">
                                 <div class="head">BruhProx</div>
-                                <div class="sub-title">Online - Working</div>
+                                <div class="sub-title">Status:  <span id="status1">Checking...</span></div>
                             </div>
                         </div>
                       <div class="row">
                             <i class="fas fa-globe-americas"></i>
                             <div class="info">
                                 <div class="head">Terbium</div>
-                                <div class="sub-title">Online - Working
+                                <div class="sub-title">Status: <span id="status2">Checking...</span>
 </div>
                             </div>
                         </div>
                         <div class="row">
                             <i class="fas fa-globe-americas"></i>
                             <div class="info">
-                                <div class="head">BruhProx (Replit)</div>
-                                <div class="sub-title">Offline - ⚠ Server Offline
-</div>
+                                <div class="head">Terbium (Replit)</div>
+                                <div class="sub-title">Status: <span id="status3">Checking...</span></div>
                             </div>
                         </div>
                       <div class="row">
                             <i class="fas fa-globe-americas"></i>
                             <div class="info">
                                 <div class="head">z1g Hub Services</div>
-                                <div class="sub-title">Online - Working
+                                <div class="sub-title">Status: <span id="status4">Checking...</span>
 </div>
                             </div>
                         </div>
@@ -117,22 +116,21 @@
                             <i class="fas fa-globe"></i>
                             <div class="info">
                                 <div class="head">z1g API</div>
-                                <div class="sub-title">Online - Working
-</div>
+                                <div class="sub-title">Status: <span style="color: green;">Online</span></div>
                             </div>
                         </div>
                       <div class="row">
                             <i class="fas fa-globe-americas"></i>
                             <div class="info">
                                 <div class="head">z1g Archives</div>
-                                <div class="sub-title">Online - Working</div>
+                                <div class="sub-title">Status:  <span id="status6">Checking...</span></div>
                             </div>
                         </div>
                       <div class="row">
                             <i class="fas fa-globe-americas"></i>
                             <div class="info">
                                 <div class="head">z1g CDN</div>
-                                <div class="sub-title">Online - Working</div>
+                                <div class="sub-title">Status:  <span id="status7">Checking...</span></div>
                             </div>
                         </div>
                     </div>
@@ -145,22 +143,21 @@
                             <i class="fas fa-globe-americas"></i>
                             <div class="info">
                                 <div class="head">Blurred X</div>
-                                <div class="sub-title">Online - ⚠ Not Fully Functioning</div>
+                                <div class="sub-title">Status: <span id="status8">Checking...</span></div>
                             </div>
                         </div>
                       <div class="row">
                             <i class="fas fa-globe"></i>
                             <div class="info">
                                 <div class="head">Legacy z1g Project API</div>
-                                <div class="sub-title">Unable to Ping - ⚠ Server Unavalible
-</div>
+                                <div class="sub-title">Status: <span style="color: red;">Offline</span></div>
                             </div>
                         </div>
                         <div class="row">
                             <i class="fas fa-globe-americas"></i>
                             <div class="info">
                                 <div class="head">Sodium</div>
-                                <div class="sub-title">Online - Working
+                                <div class="sub-title">Status: <span id="status9">Checking...</span>
 </div>
                             </div>
                         </div>
@@ -168,29 +165,28 @@
                             <i class="fas fa-globe-americas"></i>
                             <div class="info">
                                 <div class="head">Velocity</div>
-                                <div class="sub-title">Offline - ❌ Domain Expired
-</div>
+                                <div class="sub-title">Status: <span style="color: red;">Offline</span></div>
                             </div>
                         </div>
                         <div class="row">
                             <i class="fas fa-globe-americas"></i>
         <div class="info">
         <div class="head">Floppa Library</div>
-        <div class="sub-title">Offline - ⚠ Servers Offline</div>
+        <div class="sub-title">Status: <span style="color: red;">Offline</span></div>
                             </div>
                         </div>
                         <div class="row">
                             <i class="fas fa-globe-americas"></i>
                             <div class="info">
                                 <div class="head">Blurred's Vault</div>
-                                <div class="sub-title">Online - ❌ Client Patched</div>
+                                <div class="sub-title">Status: <span style="color: red;">Offline (Patched)</span></div>
                             </div>
                         </div>
                       <div class="row">
                             <i class="fas fa-globe-americas"></i>
                             <div class="info">
                                 <div class="head">z1g Client Services</div>
-                                <div class="sub-title">Online - Working</div>
+                                <div class="sub-title">Status: <span id="status10">Checking...</span></div>
                             </div>
                         </div>
                     </div>
@@ -200,11 +196,39 @@
         </div>
     </section>
 
-    <!-- footer section start -->
     <footer>
         <span>© Copyright 2021-2023 <a href="/copyright/">z1g Project</a> | All rights reserved.</span>
     </footer>
 
     <script src="/script.js"></script>
+    <script>
+        function checkServiceStatus(url, statusElement) {
+            fetch(url)
+                .then(response => {
+                    if (response.status === 200 || response.status === 304) {
+                        statusElement.textContent = "Online";
+                        statusElement.style.color = "green";
+                    } else {
+                        statusElement.textContent = "Offline";
+                        statusElement.style.color = "red";
+                    }
+                })
+                .catch(error => {
+                    statusElement.textContent = "Offline";
+                    statusElement.style.color = "red";
+                });
+        }
+
+        checkServiceStatus("https://bruhprox.pages.dev", document.getElementById("status1"));
+        checkServiceStatus("https://terbium-46q.pages.dev", document.getElementById("status2"));
+        checkServiceStatus("https://terbium.johnglynn2.repl.co", document.getElementById("status3"));
+        checkServiceStatus("https://z1g-project.repl.co/z1g-hub", document.getElementById("status4"));
+        //checkServiceStatus("https://z1g-project.repl.co/api", document.getElementById("status5"));
+        checkServiceStatus("https://archives.z1g-project.repl.co", document.getElementById("status6"));
+        checkServiceStatus("https://cdn.z1g-project.repl.co", document.getElementById("status7"));
+        checkServiceStatus("https://blurred-x.pages.dev", document.getElementById("status8"));
+        checkServiceStatus("https://sodium-5h8.pages.dev", document.getElementById("status9"));
+        checkServiceStatus("https://cdn.z1g-project.repl.co/z1g-hub/client/currentversion.txt", document.getElementById("status10"));
+    </script>
 </body>
 </html>
