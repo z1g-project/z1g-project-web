@@ -382,6 +382,11 @@ section .title::after{
 .teams .title::after{
     content: "Meet our Team";
 }
+
+.projectlist .title::after {
+    content: "Meet our Projects";
+}
+
 .teams .carousel .card{
     background: #222;
     border-radius: 6px;
@@ -441,7 +446,7 @@ section .title::after{
     background: crimson!important;
 }
 
-//*Projects CSS*//
+/*Projects CSS*/
 .projects .title::after{
     content: "test";
 }
