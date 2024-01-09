@@ -35,14 +35,14 @@ $(document).ready(function(){
 
     // typing text animation script
     var typed = new Typed(".typing", {
-        strings: ["Web Proxys", "Games", "Utilitys", "and More!"],
+        strings: ["Web Proxies", "Games", "Utilities", "and More."], // rahhh !!! gramer !!!
         typeSpeed: 100,
         backSpeed: 60,
         loop: true
     });
 
     var typed = new Typed(".typing-2", {
-        strings: ["Unblocking Websites", "Game Librarys", "Utilitys"],
+        strings: ["Website Unblocking", "Game Libraries", "Utilities"],
         typeSpeed: 100,
         backSpeed: 60,
         loop: true
