@@ -1,6 +1,10 @@
 const express = require("express");
 const app = express();
 
+app.get('/discord', (req, res) => {
+  res.redirect(308, 'https://discord.com/invite/fXERDSWyeu')
+})
+
 app.use(express.static(__dirname + "/static"), (_, res, next) => {
   res.status(404)
   res.sendFile(__dirname + "/404.html")
