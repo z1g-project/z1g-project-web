@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 
-app.get('/discord', (req, res) => {
+app.get('/discord/', (req, res) => {
   res.redirect(308, 'https://discord.com/invite/fXERDSWyeu')
 })
 
