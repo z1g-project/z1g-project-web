@@ -1,0 +1,107 @@
+body{
+	margin: 100;
+	padding: 100;
+	font-family: sans-serif;
+	background: linear-gradient(120deg, #111111, #262626, #424242);
+	animation: change 10s ease-in-out infinite;
+}
+.box{
+	width: 300px;
+	padding: 40px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	background: #404040;
+	text-align: center;
+	border-radius:24px;
+}
+.box h1{
+	color: #ffffff;
+	text-tr: uppercase;
+	font-weight: 500px;
+}
+.box input[type = "text"],.box input[type = "password"]{
+	border:0;
+	background: none;
+	display: block;
+	margin: 20px auto;
+	text-align: center;
+	border: 2px solid #ffffff;
+	padding: 14px 10px;
+	width: 200px;
+	outline: none;
+	color: white;
+	border-radius: 24px;
+	transition: 0.25s;
+
+}
+.box input[type = "text"]:focus,.box input[type = "password"]:focus{
+	width:280px;
+	border-color: #2ecc71;
+}
+.box button[type = "button"]{
+	border:0;
+	background: none;
+	display: block;
+	margin: 20px auto;
+	text-align: center;
+	border: 2px solid #2ecc71;
+	padding: 14px 40px;
+	outline: none;
+	color: white;
+	border-radius: 24px;
+	transition: 0.25s;
+	cursor: pointer;
+}
+.box button[type = "button"]:hover{
+	background: #2ecc71;
+}
+
+.box button[type = "allowbutton"]{
+	border:0;
+	background: none;
+	display: block;
+	margin: 20px auto;
+	text-align: center;
+	border: 2px solid #2ecc71;
+	padding: 14px 40px;
+	outline: none;
+	color: white;
+	border-radius: 24px;
+	transition: 0.25s;
+	cursor: pointer;
+}
+.box button[type = "allowbutton"]:hover{
+	background: #2ecc71;
+}
+
+.box button[type = "denybutton"]{
+	border:0;
+	background: none;
+	display: block;
+	margin: 20px auto;
+	text-align: center;
+	border: 2px solid #ff1900;
+	padding: 14px 40px;
+	outline: none;
+	color: white;
+	border-radius: 24px;
+	transition: 0.25s;
+	cursor: pointer;
+}
+.box button[type = "denybutton"]:hover{
+	background: #ff1900;
+}
+
+@keyframes change{
+	0%{
+		background-position: 0 50%;
+	}
+	50%{
+		background-position: 100% 50%;
+	}
+	100%{
+		background-position: 0 50%;
+	}
+}
