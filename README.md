@@ -1,9 +1,7 @@
-<p align="center"><img src="static/assets/img/logo.png" height="200">
-</p>
 
-# The z1g Project Website Source Code
+# The z1g Project Website Source Code (OLD)
 
-The Official z1g Project Website source code repository!
+The OLD z1g Project website. The new combined docs and website can be found [here](../../../Web)
 
 ## Credits
 
