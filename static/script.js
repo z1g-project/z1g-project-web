@@ -1,3 +1,4 @@
+window.location.replace("https://z1g-project.vercel.app/")
 $(document).ready(function(){
     $(window).scroll(function(){
         // sticky navbar on scroll script
